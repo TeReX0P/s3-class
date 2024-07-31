@@ -1,47 +1,47 @@
 import java.util.*;
 public class digits {
     public static void main(String[] args) {
-        System.out.println("Enter the number :");
-        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the number :");
+        Scanner sc = new Scanner(System.in);
         int n=sc.nextInt();
         int rev=0;
         while(n>0){
             int r=n%10;
-            rev=r*10+r;
+            rev=rev*10+r;
             n=n/10;
         }
-        while(rev=0){
+        while(rev>0){
             int dig=rev%10;
             switch (dig) {
                 case 0:
-                    System.out.println("Zero");
+                    System.out.print(" Zero ");
                     break;
                 case 1:
-                    System.out.println("One");
+                    System.out.print(" One ");
                     break;
                 case 2:
-                    System.out.println("Two");
+                    System.out.print(" Two ");
                     break;
                 case 3:
-                    System.out.println("Three");
+                    System.out.print(" Three ");
                     break;
                 case 4:
-                    System.out.println("Four");
+                    System.out.print(" Four ");
                     break;
                 case 5:
-                    System.out.println("Five");
+                    System.out.print(" Five ");
                     break;
                 case 6:
-                    System.out.println("Six");
+                    System.out.print(" Six ");
                     break;
                 case 7:
-                    System.out.println("Seven");
+                    System.out.print(" Seven ");
                     break;
                 case 8:
-                    System.out.println("Eight");
+                    System.out.print(" Eight ");
                     break;
                 case 9:
-                    System.out.println("Nine");
+                    System.out.print(" Nine ");
                     break;
             }
             rev=rev/10;
