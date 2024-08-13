@@ -14,4 +14,3 @@ public class wordrev
         System.out.println("Reverse of the word is: "+rev);
     }
 }
-        
