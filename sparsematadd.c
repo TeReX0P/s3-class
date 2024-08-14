@@ -25,7 +25,7 @@ void read(int a[10][10], int s[10][3], int m, int n){
             }
         }
     }
-    s[0][2] = k - 1; // Number of non-zero elements
+    s[0][2] = k - 1; 
 }
 
 void add(int a[10][3], int b[10][3], int s[10][3]){

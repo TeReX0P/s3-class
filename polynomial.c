@@ -27,7 +27,7 @@ int read(struct poly p1[]){
     scanf("%d",&t1);
     printf("Enter the polynomial terms with coeff and expo in descending order\n");
     for(i=0;i<t1;i++){
-        scanf("%d%d",&p1[i].coeff,&p1[i].expo);
+        scanf("%d %d",&p1[i].coeff,&p1[i].expo);
     }
     return t1;
 }
