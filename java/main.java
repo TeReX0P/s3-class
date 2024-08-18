@@ -18,7 +18,9 @@ public class main{
             s[i] = new student(name, marks);
         }
         System.out.println("Name and marks of 5 students: ");
-        System.out.println(s[i].name + " " + s[i].marks);
+        for(int i=0; i<5; i++){
+            System.out.println(s[i].name + " " + s[i].marks);
+        }
         System.out.println("average marks: ");
         int sum = 0;
         for(int i=0; i<5; i++){
