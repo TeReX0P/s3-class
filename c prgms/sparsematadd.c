@@ -3,7 +3,7 @@
 void display(int x[10][3]){
     int i,j;
     printf("Sparse matrix representation\n");
-    for(i=0;i<x[0][2];i++){
+    for(i=0;i<=x[0][2];i++){
         for(j=0;j<3;j++){
             printf("%d  \t",x[i][j]);
         }
