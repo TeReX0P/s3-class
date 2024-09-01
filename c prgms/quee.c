@@ -37,6 +37,7 @@ void display(){
         }
     }
 }
+
 void main(){
     int ch,item;
     printf("Enter the size of the queue\n");

@@ -54,7 +54,19 @@ void main(){
                     scanf("%d",&x);
                     for(i=0;i<n;i++){
                         if(arr[i]==x){
-                            pos=i;
+                            pos=i;printf("Enter the element to be inserted :");
+                scanf("%d",&x);
+                printf("Enter the position at which the element is to be inserted :");
+                scanf("%d",&pos);
+                arr[n]=0;
+                for(i=n;i>pos;i--){
+                    arr[i]=arr[i-1];}
+                arr[pos]=x;
+                n++;
+                printf("The array after insertion is :");
+                for(i=0;i<n;i++){
+                    printf("%d\t",arr[i]);}
+                break;
                             break;}}
                     for(i=pos;i<n;i++){
                         arr[i]=arr[i+1];}
