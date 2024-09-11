@@ -6,7 +6,7 @@ void push(int item){
     }
     else if(f==-1&&r==-1){
         f=r=0;
-        a[r]=item;
+        a[f]=item;
     }
     else if(f>0){
         f--;
