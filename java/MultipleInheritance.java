@@ -29,9 +29,10 @@ class Manager extends Employee{
 	}
 }
 class Intern extends Employee{
-	String uni, duration;
+	String uni;
+	int duration;
 	int stipend;
-	Intern(String name,int id,String dept,int stipend,String uni,String duraion){
+	Intern(String name,int id,String dept,int stipend,String uni,int duration){
 		super(name,id,dept);
 		this.uni=uni;
 		this.stipend=stipend;
@@ -75,7 +76,7 @@ public class MultipleInheritance{
 		System.out.print("Enter University: ");
 		String uni=scan.next();
 		System.out.print("Enter Duration: ");
-		String duration=scan.next();
+		int duration=scan.nextInt();
 		System.out.print("Enter stipend: ");
 		int stipend =scan.nextInt();
 		
