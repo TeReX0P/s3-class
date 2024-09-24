@@ -1,3 +1,4 @@
+import java.util.Scanner;
 abstract class Compartment {
     protected int availableSeats;
 
@@ -41,16 +42,38 @@ class GeneralClass extends Compartment {
 
 public class Train {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
         FirstClass firstClass = new FirstClass(50);
         GeneralClass generalClass = new GeneralClass(100);
 
         firstClass.notice();
         generalClass.notice();
 
-        firstClass.bookTicket(5);
-        generalClass.bookTicket(10);
-
-        firstClass.notice();
-        generalClass.notice();
+        while(true){
+            System.out.println("Choose an option: 1. Book First Class Ticket 2. Book General Class Ticket 3. show available seats 4. Exit");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter number of seats to book:");
+                    int firstClassSeats = sc.nextInt();
+                    firstClass.bookTicket(firstClassSeats);
+                    break;
+                case 2:
+                    System.out.println("Enter number of seats to book:");
+                    int generalClassSeats = sc.nextInt();
+                    generalClass.bookTicket(generalClassSeats);
+                    break;
+                case 3:
+                    firstClass.notice();
+                    generalClass.notice();
+                    break;
+                case 4:
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        }
+        
     }
 }
