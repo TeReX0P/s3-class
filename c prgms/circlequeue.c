@@ -38,13 +38,14 @@ void display(){
             }
         }
         else{
-            for(i=f;i<s-1;i++){
+            for(i=f;i<s;i++){
                 printf("%d\t",a[i]);
             }
             for(i=0;i<=r;i++){
                 printf("%d\t",a[i]);
             }
         }
+        printf("\n");
     }
 }
 void main(){
