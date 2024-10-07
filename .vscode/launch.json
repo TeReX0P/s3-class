@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "odd",
+      "request": "launch",
+      "mainClass": "odd",
+      "projectName": "s3-class_5c18c834"
+    },
+    {
+      "type": "java",
+      "name": "trycatch",
+      "request": "launch",
+      "mainClass": "trycatch",
+      "projectName": "s3-class_5c18c834"
+    },
+    {
+      "type": "java",
+      "name": "TryCatchExample",
+      "request": "launch",
+      "mainClass": "TryCatchExample",
+      "projectName": "s3-class_5c18c834"
+    },
+    {
+      "type": "java",
       "name": "demo3",
       "request": "launch",
       "mainClass": "demo3",
