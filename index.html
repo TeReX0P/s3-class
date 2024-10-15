@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs Repository</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="follower"></div>
+    <script src="index.js"></script>
+    <header>
+        <h1>Programs Repository</h1>
+    </header>
+    <main>
+        <section id="java">
+            <h2>Java Programs</h2>
+            <ul>
+                <li><a href="/java/amstrong.java" download>amstrong.java</a></li>
+                <li><a href="/java/bank.java" download>bank.java</a></li>
+                <li><a href="/java/book.java" download>book.java</a></li>
+                <li><a href="/java/char.java" download>char.java</a></li>
+                <li><a href="/java/char1.java" download>char1.java</a></li>
+                <li><a href="/java/char2.java" download>char2.java</a></li>
+                <li><a href="/java/char3.java" download>char3.java</a></li>
+                <!-- Add more Java programs as needed -->
+            </ul>
+            <button onclick="downloadAll('java')">Download All Java Files</button>
+        </section>
+        <section id="data-structures">
+            <h2>Data Structures Programs</h2>
+            <ul>
+                <li><a href="programs/data-structures/Program1.s" download>Program1.s</a></li>
+                <li><a href="programs/data-structures/Program2.s" download>Program2.s</a></li>
+                <!-- Add more Data Structures programs as needed -->
+            </ul>
+            <button onclick="downloadAll('data-structures')">Download All Data Structures Files</button>
+        </section>
+    </main>
+    <footer>
+        <button onclick="downloadAll('all')">Download All Files</button>
+    </footer>
+    <script>
+        function downloadAll(type) {
+            const links = {
+                'java': [
+                    'programs/java/Program1.java',
+                    'programs/java/Program2.java'
+                    // Add more Java program paths here
+                ],
+                'data-structures': [
+                    'programs/data-structures/Program1.s',
+                    'programs/data-structures/Program2.s'
+                    // Add more Data Structures program paths here
+                ],
+                'all': [
+                    'programs/java/Program1.java',
+                    'programs/java/Program2.java',
+                    'programs/data-structures/Program1.s',
+                    'programs/data-structures/Program2.s'
+                    // Add all program paths here
+                ]
+            };
+
+            links[type].forEach(function (path) {
+                const a = document.createElement('a');
+                a.href = path;
+                a.download = path.split('/').pop();
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            });
+        }
+    </script>
+</body>
+</html>
