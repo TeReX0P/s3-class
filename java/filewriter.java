@@ -5,7 +5,8 @@ public class filewriter {
         Scanner s = new Scanner(System.in);
         System.out.print("eneter file name with .txt: ");
         String filePath = s.nextLine();
-        String content = "This is a sample sentence written to the file.";
+        System.out.print("enter the contend to write :");
+        String content = s.nextLine();
         try{
             FileWriter fileWriter = new FileWriter(filePath);
             fileWriter.write(content);
