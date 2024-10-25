@@ -3,6 +3,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "BankTransaction",
+      "request": "launch",
+      "mainClass": "BankTransaction",
+      "projectName": "s3-class_5c18c834"
+    },
+    {
+      "type": "java",
+      "name": "syncro",
+      "request": "launch",
+      "mainClass": "syncro",
+      "projectName": "s3-class_5c18c834"
+    },
+    {
+      "type": "java",
+      "name": "multithread2",
+      "request": "launch",
+      "mainClass": "multithread2",
+      "projectName": "s3-class_5c18c834"
+    },
+    {
+      "type": "java",
+      "name": "randomthread",
+      "request": "launch",
+      "mainClass": "randomthread",
+      "projectName": "s3-class_5c18c834"
+    },
+    {
+      "type": "java",
+      "name": "fileread",
+      "request": "launch",
+      "mainClass": "fileread",
+      "projectName": "s3-class_5c18c834"
+    },
+    {
+      "type": "java",
+      "name": "filewriter",
+      "request": "launch",
+      "mainClass": "filewriter",
+      "projectName": "s3-class_5c18c834"
+    },
+    {
+      "type": "java",
+      "name": "stringtoken",
+      "request": "launch",
+      "mainClass": "stringtoken",
+      "projectName": "s3-class_5c18c834"
+    },
+    {
+      "type": "java",
       "name": "odd",
       "request": "launch",
       "mainClass": "odd",
