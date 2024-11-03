@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "traffic",
+      "request": "launch",
+      "mainClass": "traffic",
+      "projectName": "s3-class_5c18c834"
+    },
+    {
+      "type": "java",
+      "name": "Calcu",
+      "request": "launch",
+      "mainClass": "Calcu",
+      "projectName": "s3-class_5c18c834"
+    },
+    {
+      "type": "java",
       "name": "BankTransaction",
       "request": "launch",
       "mainClass": "BankTransaction",

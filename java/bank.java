@@ -2,6 +2,7 @@ interface Account {
     void deposit (double amy);
     void withdraw(double amt);
     double viewBalance();}
+    
 class SavingAccount implements Account {
     private double bal;
     private double intrate;
