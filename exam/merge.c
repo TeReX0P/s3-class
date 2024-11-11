@@ -57,7 +57,16 @@ void merge_sort(int *A, int low, int high)
 
 int main()
 {
-    int A[] = {9, 14, 4, 8, 7, 5, 6};
-    merge_sort(A, 0, 6);
-    printArray(A, 7);
+   int n;
+printf("Enter the number of elements: ");
+scanf("%d", &n);
+int A[n];
+printf("Enter the elements: ");
+for (int i = 0; i < n; i++)
+{
+    scanf("%d", &A[i]);
+}
+merge_sort(A, 0, n - 1);
+printArray(A, n);
+return 0;
 }

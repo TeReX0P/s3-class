@@ -45,22 +45,30 @@ int partition(int A[], int low, int high)
 
 void quickSort(int A[], int low, int high)
 {
-    int partitionIndex; // Index of pivot after partition
+    int partitionIndex; 
 
     if (low < high)
     {
         partitionIndex = partition(A, low, high); 
-        quickSort(A, low, partitionIndex - 1);  // sort left subarray 
-        quickSort(A, partitionIndex + 1, high); // sort right subarray
+        quickSort(A, low, partitionIndex - 1);  
+        quickSort(A, partitionIndex + 1, high); 
     }
 }
 
+
 int main()
 {
-    
-    int A[] = {9, 4, 4, 8, 7, 5, 6};
-    int n = 9;
-    n =7;
+    int n;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    int A[n];
+    printf("Enter the elements: ");
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &A[i]);
+    }
+
     printArray(A, n);
     quickSort(A, 0, n - 1);
     printArray(A, n);

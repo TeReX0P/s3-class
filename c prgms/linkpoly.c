@@ -121,6 +121,32 @@ struct node *multipoly(struct node *p1, struct node *p2)
     return result;
 }
 
+
+struct node *simplify(struct node *head)
+{
+    struct node *ptr1 = head, *ptr2, *dup;
+    while(ptr1 != NULL && ptr1->link != NULL)
+    {
+        ptr2 = ptr1;
+        while(ptr2->link != NULL)
+        {
+            if(ptr1->expo == ptr2->link->expo)
+            {
+                ptr1->coef = ptr1->coef + ptr2->link->coef;
+                dup = ptr2->link;
+                ptr2->link = ptr2->link->link;
+                free(dup);
+            }
+            else
+            {
+                ptr2 = ptr2->link;
+            }
+        }
+        ptr1 = ptr1->link;
+    }
+    return head;
+}
+
 int main()
 {
     struct node *poly1 = NULL, *poly2 = NULL;
@@ -136,6 +162,7 @@ int main()
     printf("The sum of the polynomials is: ");
     display(addition);
     struct node *multiplication = multipoly(poly1, poly2);
+    multiplication = simplify(multiplication);
     printf("The product of the polynomials is: ");
     display(multiplication);
     return 0;
