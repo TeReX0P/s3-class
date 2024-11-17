@@ -3,12 +3,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class Calcu extends JFrame implements ActionListener {
+class exp8_1 extends JFrame implements ActionListener {
     private JTextField display;
     private double num1, num2, result;
     private char operator;
 
-    public Calcu() {
+    public exp8_1() {
         setTitle("Simple Calculator");
         setSize(400, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -81,7 +81,7 @@ class Calcu extends JFrame implements ActionListener {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            Calcu calculator = new Calcu();
+            exp8_1 calculator = new exp8_1();
             calculator.setVisible(true);
         });
     }

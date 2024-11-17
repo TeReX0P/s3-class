@@ -3,13 +3,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class traffic extends JFrame implements ActionListener {
+class exp8_2 extends JFrame implements ActionListener {
     private JRadioButton redButton;
     private JRadioButton yellowButton;
     private JRadioButton greenButton;
     private JPanel lightPanel;
 
-    public traffic() {
+    public exp8_2() {
         setTitle("Traffic Light Simulator");
         setSize(300, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -82,7 +82,7 @@ class traffic extends JFrame implements ActionListener {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            traffic frame = new traffic();
+            exp8_2 frame = new exp8_2();
             frame.setVisible(true);
         });
     }
