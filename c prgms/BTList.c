@@ -1,17 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 struct node {
     int data;
     struct node* left;
     struct node* right;};
+
 struct node *root = NULL, *loc = NULL, *ploc = NULL;
 int key, item;
+
 struct node* create_node(int data) {
     struct node* new_node = (struct node*)malloc(sizeof(struct node));
     new_node->data = data;
     new_node->left = NULL;
     new_node->right = NULL;
     return new_node;}
+
+
 void build(struct node* ptr) {
     int ch;
     printf("\nEnter item: ");
@@ -26,12 +31,16 @@ void build(struct node* ptr) {
     if (ch == 0) {
         ptr->right = create_node(0);
         build(ptr->right);}}
+
+
 void inorder(struct node* ptr) { 
     if (ptr == NULL)
         return;
     inorder(ptr->left);
     printf("%d ", ptr->data);
     inorder(ptr->right);}
+
+
 int search(struct node* par, struct node* ptr, int key) {
     if (ptr != NULL) {
         if (ptr->data == key) {
@@ -42,6 +51,9 @@ int search(struct node* par, struct node* ptr, int key) {
             if (search(ptr, ptr->left, key) || search(ptr, ptr->right, key)) {
                 return 1;}}}
     return 0;}
+
+
+
 void insert(struct node* ptr) {
     printf("\nEnter item to insert: ");
     scanf("%d", &item);
@@ -66,6 +78,8 @@ void insert(struct node* ptr) {
         loc->right = create_node(item);
     } else if (ch == 0 && loc->right != NULL) {
         printf("\nRight child already exists\n");}}
+
+
 void delete_node() {
     printf("\nEnter key to delete: ");
     scanf("%d", &key);
@@ -81,6 +95,8 @@ void delete_node() {
         free(loc);
     } else {
         printf("Node is not a leaf, can't delete\n");}}
+
+
 int main() {
     int choice;
     root = create_node(0);
